@@ -13,16 +13,17 @@
         android:theme="@style/Theme.ParkingEye"
         tools:targetApi="31">
         <activity
-            android:name=".MainActivity"
+            android:name=".openingActivity"
             android:exported="true"
             android:label="@string/app_name"
             android:theme="@style/Theme.ParkingEye">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".loginActivity" />
+        <activity android:name=".settingActivity"/>
     </application>
 
 </manifest>
