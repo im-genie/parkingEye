@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#111111">
+
+    <ImageView
+        android:id="@+id/homelogo"
+        android:layout_width="42dp"
+        android:layout_height="40dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="31dp"
+        android:layout_marginTop="25dp"
+        android:adjustViewBounds="true"
+        android:scaleType="fitCenter"
+        android:src="@drawable/homelogo" />
+
+    <!-- 텍스트 (화면 중앙에 배치) -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="정산"
+        android:textColor="#FFFFFF"
+        android:textSize="30sp"
+        android:layout_toEndOf="@id/homelogo"
+        android:layout_marginTop="25dp"
+        android:layout_marginLeft="40dp"
+        android:gravity="center"
+        android:textStyle="bold"/>  <!-- 가로 중앙 정렬 -->
+
+    <TextView
+        android:id="@+id/paymentTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="110dp"
+        android:layout_marginLeft="36dp"
+        android:text="결제 수단"
+        android:textColor="#FFFFFF"
+        android:textSize="27sp"
+        android:textStyle="bold"/>
+
+    <RadioGroup
+        android:id="@+id/paymentOptions"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/paymentTitle"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="16dp"
+        android:orientation="vertical">
+
+        <RadioButton
+            android:id="@+id/cardPayment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:buttonTint="#E4FF00"
+            android:minHeight="48dp"
+            android:text="  신용/체크카드"
+            android:textColor="#FFFFFF"
+            android:textSize="22sp"
+            android:textStyle="bold" />
+
+        <View
+            android:layout_width="358dp"
+            android:layout_height="1dp"
+            android:background="#E4FF00" />
+
+        <RadioButton
+            android:id="@+id/accountPayment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:buttonTint="#E4FF00"
+            android:minHeight="48dp"
+            android:text="  계좌 이체/무통장 입금"
+            android:textColor="#FFFFFF"
+            android:textSize="22sp"
+            android:textStyle="bold" />
+
+
+        <View
+            android:layout_width="358dp"
+            android:layout_height="1dp"
+            android:background="#E4FF00" />
+
+        <RadioButton
+            android:id="@+id/phonePayment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="  휴대폰"
+            android:textColor="#FFFFFF"
+            android:textSize="22sp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="10dp"
+            android:buttonTint="#E4FF00"
+            android:textStyle="bold"/>
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/finishButton"
+        android:layout_width="315dp"
+        android:layout_height="51dp"
+        android:text="선택 완료"
+        android:textColor="#000000"
+        android:textSize="21sp"
+        android:layout_below="@id/paymentOptions"
+        android:layout_marginTop="40dp"
+        android:background="#E4FF00"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:layout_centerHorizontal="true"/>
+
+
+</RelativeLayout>
