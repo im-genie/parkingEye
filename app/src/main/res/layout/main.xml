@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#111111">
+
+    <!-- 로고 -->
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginTop="28dp"
+        android:layout_marginLeft="36dp"
+        android:src="@drawable/homelogo"
+        android:contentDescription="Logo"/>
+
+
+    <!-- 환영 메시지 -->
+
+    <!-- 메뉴 선택 버튼들 -->
+    <TextView
+        android:id="@+id/welcomeMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/logo"
+        android:layout_alignParentLeft="true"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="36dp"
+        android:text="OOO님 환영합니다!"
+        android:textColor="#FFFFFF"
+        android:textSize="35sp"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/menupickMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/welcomeMessage"
+        android:layout_alignParentLeft="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="36dp"
+        android:text="메뉴 선택"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp" />
+
+
+    <!-- 현재 이용 시간 -->
+
+    <GridLayout
+        android:id="@+id/menuGrid"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/welcomeMessage"
+        android:layout_marginTop="33dp"
+        android:layout_marginLeft="13dp"
+        android:columnCount="2"
+        android:gravity="center"
+        android:padding="20dp"
+        tools:ignore="ExtraText">
+
+        <ImageButton
+            android:id="@+id/findEmptySpot"
+            android:layout_width="154dp"
+            android:layout_height="144dp"
+            android:layout_row="0"
+            android:layout_column="0"
+            android:layout_marginEnd="7dp"
+            android:background="@null"
+            android:contentDescription="빈 자리 찾기"
+            android:scaleType="fitCenter"
+            android:src="@drawable/searching_empty" />
+
+        <ImageButton
+            android:id="@+id/findLicensePlate"
+            android:layout_width="154dp"
+            android:layout_height="144dp"
+            android:layout_row="0"
+            android:layout_column="1"
+            android:layout_marginStart="7dp"
+            android:background="@null"
+            android:contentDescription="번호판 찾기"
+            android:scaleType="fitCenter"
+            android:src="@drawable/finding_number" />  <!-- 왼쪽 여백 추가 -->
+
+    </GridLayout>
+
+    <ImageView
+        android:id="@+id/usingTimeImage"
+        android:layout_width="324dp"
+        android:layout_height="144dp"
+        android:src="@drawable/using_time"
+        android:contentDescription="현재 이용 시간 이미지"
+        android:layout_below="@id/menuGrid"
+        android:layout_centerHorizontal="true"
+        android:scaleType="fitCenter" />  <!-- 비율을 유지하면서 크기 조정 -->
+
+    <!-- 즐겨찾는 주차장 제목 -->
+
+    <TextView
+        android:id="@+id/favoriteParkingTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="즐겨찾는 주차장"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:layout_marginTop="520dp"
+        android:layout_marginLeft="36dp"/>
+
+    <ImageView
+        android:id="@+id/favorite_parkingzone"
+        android:layout_width="324dp"
+        android:layout_height="130dp"
+        android:src="@drawable/fav_parking"
+        android:contentDescription="즐겨찾는 주차장 이미지"
+        android:layout_below="@id/favoriteParkingTitle"
+        android:layout_centerHorizontal="true"
+        android:scaleType="fitCenter" />  <!-- 비율을 유지하면서 크기 조정 -->
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/favorite_parkingzone"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="0dp"
+        android:layout_marginBottom="0dp"
+        android:src="@drawable/underbar" />
+
+
+
+
+</RelativeLayout>
